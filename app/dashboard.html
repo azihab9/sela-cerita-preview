@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f0e9">
+  <meta name="description" content="Dashboard pribadi Sela Cerita.">
+  <title>Dashboard — Sela Cerita</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="../index.html"><span class="brand-mark">✿</span><span>Sela Cerita<small>EVERY MOMENT HAS A STORY</small></span></a>
+      <p class="side-label">WORKSPACE</p>
+      <nav class="side-nav" aria-label="Navigasi dashboard">
+        <a class="active" href="#overview" data-view="overview"><span>⌂</span> Dashboard</a>
+        <a href="#projects" data-view="projects"><span>▧</span> Ceritaku</a>
+        <a href="#templates" data-view="templates"><span>✳</span> Pilih template</a>
+        <a href="#orders" data-view="orders"><span>▤</span> Pesanan</a>
+      </nav>
+      <p class="side-label account-label">ACCOUNT</p>
+      <nav class="side-nav">
+        <a href="#settings" data-view="settings"><span>⚙</span> Pengaturan</a>
+        <a href="#help" data-view="help"><span>♡</span> Bantuan</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="avatar" id="user-avatar">SC</div><div class="user-meta"><b id="user-name">Ruang ceritamu</b><small id="user-email">Customer workspace</small></div><button class="logout-button" id="logout-button" type="button" title="Keluar">↗</button></div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobile-menu" aria-label="Buka navigasi">☰</button>
+        <div class="breadcrumb">Workspace <span>/</span> <b id="crumb">Dashboard</b></div>
+        <a class="view-site" href="../index.html">Lihat website ↗</a>
+      </header>
+
+      <section class="view active-view" id="overview">
+        <div class="welcome-row"><div><p class="eyebrow">YOUR LITTLE CREATIVE SPACE</p><h1>Halo, <em>teman cerita.</em> ♡</h1><p class="subheading">Semua cerita spesialmu dimulai dari sini.</p></div><div class="date-chip">✳ &nbsp; YOUR SPACE, YOUR STORY</div></div>
+        <div class="stats-grid">
+          <article class="stat-card"><span class="stat-icon peach">▧</span><small>Total cerita</small><strong id="project-count">2</strong><span>Project dalam akunmu</span></article>
+          <article class="stat-card"><span class="stat-icon lilac">✎</span><small>Dalam pengerjaan</small><strong id="draft-count">0</strong><span>Cerita yang masih draft</span></article>
+          <article class="stat-card"><span class="stat-icon sage">♡</span><small>Website terbit</small><strong id="published-count">0</strong><span>Siap dibagikan</span></article>
+        </div>
+        <div class="section-title"><div><p class="eyebrow">MADE BY YOU</p><h2>Cerita terakhirmu</h2></div><button class="text-button" data-go="projects">Lihat semua →</button></div>
+        <div class="project-grid" id="recent-projects"><p class="loading-state">Memuat ceritamu...</p></div>
+        <div class="bottom-note"><span>✿</span><div><b>Setiap cerita punya tempatnya sendiri.</b><p>Ambil waktumu, isi dengan hal-hal yang berarti, dan biarkan Sela Cerita merangkainya.</p></div></div>
+      </section>
+
+      <section class="view" id="projects">
+        <div class="page-heading"><p class="eyebrow">YOUR COLLECTION</p><h1>Ceritaku <em>sendiri.</em></h1><p class="subheading">Kelola semua website yang kamu buat dalam satu tempat.</p></div>
+        <div class="toolbar"><span>Semua project <b id="all-project-count">0</b></span><button class="primary-button" data-go="templates">＋ Buat cerita baru</button></div>
+        <div class="project-grid" id="all-projects"><p class="loading-state">Memuat ceritamu...</p></div>
+      </section>
+
+      <section class="view" id="templates">
+        <div class="page-heading"><p class="eyebrow">FIND YOUR STORY STYLE</p><h1>Pilih <em>template.</em></h1><p class="subheading">Pilih desain yang paling terasa seperti ceritamu. Kamu bisa personalisasi setelah memilih.</p></div>
+        <div class="template-grid" id="template-grid">
+          <article class="template-option"><div class="project-art bloom-art"><span>01 / THE ROMANTIC</span><div>To my<br><i>favorite</i><br>person. ♡</div><small>BLOOM TEMPLATE</small></div><h3>Bloom</h3><p>Soft, romantic, and full of warmth.</p><button class="primary-button choose-template" data-template="Bloom">Pilih Bloom ↗</button></article>
+          <article class="template-option"><div class="project-art chapter-art"><span>02 / THE EDITORIAL</span><div>CHAPTER<br><i>of us.</i></div><small>CHAPTER TEMPLATE</small></div><h3>Chapter</h3><p>Timeless, clean, and a little poetic.</p><button class="primary-button choose-template" data-template="Chapter">Pilih Chapter ↗</button></article>
+          <article class="template-option"><div class="project-art playdate-art"><span>03 / THE PLAYFUL</span><div>GOOD<br>TIMES<br><i>only!</i></div><small>PLAYDATE TEMPLATE</small></div><h3>Playdate</h3><p>Fun, colorful, and unapologetically you.</p><button class="primary-button choose-template" data-template="Playdate">Pilih Playdate ↗</button></article>
+        </div>
+      </section>
+
+      <section class="view" id="orders"><div class="page-heading"><p class="eyebrow">YOUR PURCHASES</p><h1>Pesanan <em>& pembayaran.</em></h1><p class="subheading">Pantau proses pesanan dan status pembayaranmu.</p></div><div class="empty-state"><span>♡</span><h2>Belum ada pesanan</h2><p>Pesananmu akan muncul di sini setelah kamu memilih paket dan melanjutkan checkout.</p><button class="primary-button" data-go="templates">Jelajahi template</button></div></section>
+      <section class="view" id="settings"><div class="page-heading"><p class="eyebrow">YOUR ACCOUNT</p><h1>Pengaturan <em>akun.</em></h1><p class="subheading">Kelola informasi dan keamanan akunmu.</p></div><div class="placeholder-panel"><b>Pengaturan profil</b><p>Fitur profil, email, dan keamanan akan diaktifkan setelah autentikasi Supabase terhubung.</p></div></section>
+      <section class="view" id="help"><div class="page-heading"><p class="eyebrow">WE ARE HERE FOR YOU</p><h1>Ada yang bisa <em>dibantu?</em></h1><p class="subheading">Kami ingin setiap proses membuat ceritamu terasa mudah.</p></div><div class="placeholder-panel"><b>Butuh bantuan?</b><p>Hubungi tim Sela Cerita melalui kanal bantuan resmi setelah layanan customer support diaktifkan.</p></div></section>
+      <footer>© <span id="year"></span> Sela Cerita · Every moment has a story.</footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
